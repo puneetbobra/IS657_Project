@@ -4,12 +4,22 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import Task from './components/Task'
 
+const getCurrentDate =() => {
+  let date = new Date().getDate()
+  let month = new Date().getMonth() + 1
+  let year = new Date().getFullYear()
+
+  return <View> 
+    <Text> {date + '-' + month + '-' + year} </Text>
+    </View>
+  }
+
 export default function App() {
   return (
     <View style={styles.container}>
         {/* Today's Tasks */}
         <View style = {styles.tasksWrapper}>
-          <Text style = {styles.sectionTitle}> Today's Tasks</Text>
+          <Text style = {styles.sectionTitle}> Tasks for {getCurrentDate()} </Text>
 
           <View style = {styles.items}>
             {/* Task List */}
