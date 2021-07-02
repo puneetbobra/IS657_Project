@@ -1,4 +1,3 @@
-/* Task List */
 import React, {useState} from 'react';
 import { TouchableOpacity, Platform, KeyboardAvoidingView, StyleSheet, Text, View, TextInput, Keyboard } from 'react-native';
 
@@ -19,8 +18,7 @@ export default function App() {
   const [task, setTask] = useState()
   const [taskItems, setTaskItems] = useState([])
 
-  const handleAddTask = () => {
-    //Keyboard.dismiss()
+  const handleAddTask = () => {    
     setTaskItems([...taskItems, task])  
     setTask(null)
     }
